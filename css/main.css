@@ -1,0 +1,586 @@
+@charset 'utf-8'
+@import url('notosanskr/NotoSansKR.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: -0.025rem;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* 중요한 소스 */
+.container {
+    position: relative;
+    display: block;
+    width: 160rem;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.wrap {
+    position: relative;
+    display: block;
+}
+
+.h2 {
+    position: relative;
+    display: block;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+}
+
+/* 상단 영역 */
+.header {
+    position: relative;
+    display: block;
+
+}
+
+.header .container {
+    position: relative;
+    display: block;
+}
+
+.header-left {
+    position: absolute;
+    display: block;
+    float: left;
+}
+
+.header-logo {
+    position: absolute;
+    left: 4.8rem;
+    top: 5rem;
+    display: block;
+    width: 14rem;
+    height: 7.6rem;
+    z-index: 999;
+}
+
+.header-right {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.header-main {
+    position: relative;
+    display: block;
+    margin-top: 7.5rem;
+}
+
+.header-main>li {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.header-main>li>a {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-right: 3rem;
+    color: #613937;
+}
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.visual .container {
+    height: 97.8rem;
+    background: url('../images/visual_main.png') no-repeat center;
+    background-size: cover;
+}
+
+.visual-main {
+    position: relative;
+    display: block;
+}
+
+.main-img-icon {
+    position: absolute;
+    right: 2rem;
+    top: 52rem;
+    display: block;
+    width: 21.9rem;
+    height: 15.6rem;
+    z-index: 999;
+}
+
+.sub-img-icon {
+    position: absolute;
+    left: 2rem;
+    top: 62rem;
+    display: block;
+    width: 28.4rem;
+    height: 34.9rem;
+    z-index: 99;
+}
+
+.visual-tit {
+    position: relative;
+    display: block;
+    z-index: 99;
+}
+
+.visual-tit>a {
+    position: absolute;
+    right: 12.5rem;
+    top: 35rem;
+    width: 66.6rem;
+    height: 19.5rem;
+    display: block;
+    background: url('../images/visual-tt.png') no-repeat;
+}
+
+/* 프로필 영역 */
+.profile {
+    position: relative;
+    display: block;
+    height: 96rem;
+}
+
+.profile .container {
+    height: 100%;
+    background: url('../images/profile-bk.png') repeat-x;
+}
+
+.profile-left {
+    position: absolute;
+    left: 20.5rem;
+    top: 14rem;
+    display: block;
+}
+
+.profile-par {
+    position: relative;
+    display: block;
+}
+
+.profile-title {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+    margin-bottom: 8rem;
+}
+
+.profile-txt {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #6e1652;
+    letter-spacing: -0.0025rem;
+    line-height: 1.75;
+}
+
+.profile-txt>b {
+    font-weight: 600;
+}
+
+.profile-tit-icon {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #6e1652;
+    margin-top: 3rem;
+}
+
+.profile-icon {
+    position: relative;
+    display: block;
+    margin-top: 3rem;
+
+}
+
+.profile-right {
+    position: absolute;
+    right: 25rem;
+    top: 23.5rem;
+    display: inline-block;
+    float: right;
+    width: 40rem;
+    height: 65.4rem;
+    background: url('../images/my.png') no-repeat;
+}
+
+/* 리디자인 영역 */
+.redesign {
+    position: relative;
+    display: block;
+    background-color: #fff;
+}
+
+.redesign .container {
+    position: relative;
+    display: block;
+    height: 97.5rem;
+}
+
+.redesign-left {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.redesign-main {
+    position: relative;
+    display: block;
+}
+
+.redesign-main-list {
+    position: relative;
+    display: block;
+    margin: 4rem 19.5rem;
+}
+
+.redesign-main-list>h2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 18.5rem;
+    margin-bottom: 5.5rem;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+}
+
+.redesign-main-list>span {}
+
+.redesign-number {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 2rem;
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 2;
+    color: #6e1652;
+}
+
+.redesign-tit {
+    position: relative;
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 2;
+    color: #6e1652;
+}
+
+.redesign-txt {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+}
+
+.redesign-right {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.redesign-box {
+    position: relative;
+    display: block;
+    margin-top: 18.5rem;
+    margin-bottom: 5.3rem;
+    width: 74rem;
+    height: 60rem;
+    box-sizing: border-box;
+    background-color: #f0eee7;
+}
+
+.redesign-box>a {
+    position: absolute;
+    left: 5.5rem;
+    top: 14.5rem;
+    display: block;
+    width: 58.8rem;
+    height: 40.2rem;
+    background: url('../images/subway-img.png') no-repeat;
+}
+
+.redesign-select {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 9rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #6e1652;
+}
+
+.redesign-select:first-child {
+    padding-left: 10.5rem;
+}
+
+/* 퍼픞리싱 영역 */
+.publishing {
+    position: relative;
+    display: block;
+    background-color: #efd9d1;
+}
+
+.publishing .container {
+    position: relative;
+    display: block;
+    height: 103.3rem;
+}
+
+.publishing-left {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.publishing-box {
+    position: relative;
+    display: block;
+    margin-top: 17rem;
+    margin-bottom: 6.5rem;
+    width: 76.7rem;
+    height: 61rem;
+    box-sizing: border-box;
+    background-color: #f0eee7;
+}
+
+.publishing-box>a {
+    position: absolute;
+    left: 10rem;
+    top: 12.5rem;
+    display: block;
+    width: 60.4rem;
+    height: 46.6em;
+    background: url('../images/stx-img.png') no-repeat;
+}
+
+.publishing-select {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 10.7rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #6e1652;
+}
+
+.publishing-select:first-child {
+    padding-left: 10.5rem;
+}
+
+.publishing-right {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.publishing-main {
+    position: relative;
+    display: block;
+}
+
+.publishing-main-list {
+    position: relative;
+    display: block;
+    margin: 4rem 15rem;
+}
+
+.publishing-main-list>h2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 12.5rem;
+    margin-bottom: 5.5rem;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+}
+
+.publishing-main-list>span {}
+
+.publishing-number {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 2rem;
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 2;
+    color: #6e1652;
+}
+
+.publishing-tit {
+    position: relative;
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 2;
+    color: #6e1652;
+}
+
+.publishing-txt {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.0425rem;
+}
+
+/* 기타 영역 */
+.work {
+    position: relative;
+    display: block;
+    background-color: #fff;
+}
+
+.work .container {
+    position: relative;
+    display: block;
+    height: 102rem;
+}
+
+.work-top {}
+
+.work-top>h2 {
+    position: relative;
+    display: block;
+    margin-top: 9rem;
+    margin-left: 20rem;
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+}
+
+.work-top>span {}
+
+.work-bottom {
+    position: relative;
+    display: block;
+    height: 102rem;
+}
+
+.work-box {
+    position: absolute;
+    left: 27.7rem;
+    top: 8.3rem;
+    display: block;
+    width: 55.5rem;
+    height: 32rem;
+    box-sizing: border-box;
+    background-color: #bbb;
+}
+
+/* 하단 영역 */
+.footer {
+    position: relative;
+    display: block;
+    background-color: #efd9d1;
+}
+
+.footer .container {
+    position: relative;
+    display: block;
+    height: 55rem;
+    text-align: center;
+}
+
+.footer-tit {
+    position: relative;
+    display: block;
+    padding-top: 12rem;
+
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+}
+
+.footer-ad {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.foot-txt {
+    position: relative;
+    display: block;
+    /* white-space: nowrap; */
+
+    font-size: 2rem;
+    font-weight: 600;
+    color: #6e1652;
+    line-height: 1.25;
+}
+
+.barcode {
+    position: relative;
+    display: block;
+    vertical-align: center;
+    margin-top: 4.5rem;
+}
+
+.footer-data {
+    position: relative;
+    display: block;
+    margin-top: 4.5rem;
+
+    width: 28rem;
+    height: 6.5rem;
+    border: 10px solid #6e1652;
+    border-radius: 30%;
+    font-size: 2.5;
+    font-weight: 600;
+    color: #6e1652;
+    line-height: 1.25;
+}
