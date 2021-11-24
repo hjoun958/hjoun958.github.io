@@ -17,73 +17,94 @@
     <!-- aos 관련 코드 -->
     <link rel="stylesheet" href="js/aos/aos.css">
     <script src="js/aos/aos.js"></script>
+    <!-- lightbox2 참조 -->
+    <link rel="stylesheet" href="js/lightbox2/css/lightbox.css">
+    <script src="js/lightbox2/js/lightbox.js"></script>
+    <!-- swiper 참조 -->
+    <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <script src="js/swiper/swiper.min.js"></script>
+    <!-- dotdotdot 참조
+    <script src="js/jquery.dotdotdot.min.js"></script> -->
+    <!-- Progressbar 관련 -->
     <script src="js/respond.min.js"></script>
     <script src="js/progressbar/progressbar.js"></script>
     <!-- waypoint -->
     <script src="js/counterup/waypoints.min.js"></script>
     <!-- counterup -->
     <script src="js/counterup/jquery.counterup.js"></script>
+    <!-- nicescroll.js -->
+    <script src="js/jquery.nicescroll.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fontello/css/fontello.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
+
     <div class="wrap">
         <!-- 상단 영역-->
-        <header class="header">
-            <div class="container clearfix">
-                <div class="header-left">
-                    <div class="header-logo">
-                        <img src="images/logo-visual.png" alt="logo">
-                    </div>
-                </div>
-                <div class="header-right">
-                    <ul class="header-main">
-                        <li>
-                            <a href="#">PORTFOLIO</a>
-                        </li>
-                        <li>
-                            <a href="#">REDESIGN</a>
-                        </li>
-                        <li>
-                            <a href="#">PUBLISHING</a>
-                        </li>
-                        <li>
-                            <a href="#">WORK</a>
-                        </li>
-                        <li>
-                            <a href="#">CONTACT</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+        <button class="gotop">
+            <i class="fas fa-angle-up"></i>
+        </button>
         <!-- //상단 영역-->
         <!-- 비주얼 영역 -->
-        <section class="visual">
-            <div class="container">
+        <section class="visual" id="home">
+            <header class="header">
+                <div class="container clearfix">
+                    <div class="header-left">
+                        <div class="header-logo">
+                            <img src="images/logo-visual.png" alt="logo">
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <ul class="header-main">
+                            <li>
+                                <a href="#profile">ABOUT ME</a>
+                            </li>
+                            <li>
+                                <a href="#redesign">REDESIGN</a>
+                            </li>
+                            <li>
+                                <a href="#publishing">PUBLISHING</a>
+                            </li>
+                            <li>
+                                <a href="#work">ETC</a>
+                            </li>
+                            <li>
+                                <a href="#life">LIFE</a>
+                            </li>
+                            <li>
+                                <a href="#contact">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <div class="container visual-bg">
                 <div class="visual-main">
                     <div class="main-img-icon">
                         <img src="images/main-img-icon.png" alt="">
-                    </div>
-                    <div class="sub-img-icon">
-                        <img src="images/sub-img-icon.png" alt="">
                     </div>
                     <div class="visual-tit">
                         <a href="#"></a>
                     </div>
                 </div>
             </div>
+            <div class="sub-img-icon">
+                <img src="images/sub-img-icon.png" alt="">
+            </div>
         </section>
         <!-- //비주얼 영역 -->
         <!-- 프로필 영역 -->
-        <section class="profile">
+        <section class="profile" id="profile">
             <div class="container clearfix">
                 <ul class="profile-left">
                     <li class="profile-par">
                         <h2 class="profile-title">ABOUT ME</h2>
+                        <span class="profile-bar"></span>
                     </li>
                     <li class="profile-par">
                         <p class="profile-txt"><b>Profile</b></p>
@@ -129,39 +150,40 @@
                     </li>
                 </ul>
                 <div class="profile-right">
+                    <img class="profile-img" src="images/main-img-icon.png" alt="">
                 </div>
             </div>
         </section>
         <!-- // 프로필 영역 -->
         <!-- 리디자인 영역 -->
-        <section class="redesign">
+        <section class="redesign" id="redesign">
             <div class="container clearfix">
                 <div class="redesign-left">
                     <ul class="redesign-main">
                         <li class="redesign-main-list">
                             <h2><b>REDESIGN</b></h2>
-                            <span></span>
+                            <span class="redesign-bar"></span>
                         </li>
                         <li class="redesign-main-list">
-                            <a href="#" class="redesign-number">01</a>
-                            <a href="#" class="redesign-tit">Subway</a>
-                            <a href="#" class="redesign-txt">
+                            <a href="#" class="redesign-number" red-tag="0">01</a>
+                            <a href="#" class="redesign-tit" red-tag="0">Subway</a>
+                            <a href="#" class="redesign-txt" red-tag="0">
                                 신선한 야채들과 잠수함처럼 생긴 샌드위치 빵.<br>
                                 모두가 즐겨하고 간편하고 먹을 수 있는 Subway 홈페이지 입니다.
                             </a>
                         </li>
                         <li class="redesign-main-list">
-                            <a href="#" class="redesign-number">02</a>
-                            <a href="#" class="redesign-tit">마야유치원(송현점)</a>
-                            <a href="#" class="redesign-txt">
+                            <a href="#" class="redesign-number" red-tag="1">02</a>
+                            <a href="#" class="redesign-tit" red-tag="1">마야유치원(송현점)</a>
+                            <a href="#" class="redesign-txt" red-tag="1">
                                 아이들의 다양한 체험으로 인하여 오감적으로 느끼며 <br>
                                 삶의 첫 걸음을 갖추어 가는 마야유치원 홈페이지 입니다.
                             </a>
                         </li>
                         <li class="redesign-main-list">
-                            <a href="#" class="redesign-number">03</a>
-                            <a href="#" class="redesign-tit">선치과의원(상인점)</a>
-                            <a href="#" class="redesign-txt">
+                            <a href="#" class="redesign-number" red-tag="2">03</a>
+                            <a href="#" class="redesign-tit" red-tag="2">선치과의원(상인점)</a>
+                            <a href="#" class="redesign-txt" red-tag="2">
                                 임플란트, 교정치아로 인해 불편할 수 있는 잇몸,치아를<br>
                                 깔끔하고 쾌적한 환경으로 치료할 수 있는 선치과의원 홈페이지 입니다.
                             </a>
@@ -170,120 +192,303 @@
                 </div>
                 <div class="redesign-right">
                     <div class="redesign-box">
-                        <a href="#"></a>
+                        <div class="swiper-container sw-rede">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide rede-1">
+                                    <a href="#"></a>
+                                    <div class="redesign-select-bg">
+                                        <a href="work/redesign1/design.html" target="_blank" class="
+                                            redesign-select">Redesign</a>
+                                        <a href="work/redesign1/process.html" target="_blank" class="
+                                            redesign-select">Process</a>
+                                        <a href="https://www.subway.co.kr/" target="_blank"
+                                            class="redesign-select">Origianl site</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide rede-2">
+                                    <a href="#"></a>
+                                    <div class="redesign-select-bg-sub">
+                                        <a href="work/redesign2/design.html" target="_blank"
+                                            class="redesign-select">Redesign</a>
+                                        <a href="work/redesign2/process.html" target="_blank" class="redesign-select"
+                                            target="_blank">Process</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide rede-3">
+                                    <a href="#"></a>
+                                    <div class="redesign-select-bg-sub">
+                                        <a href="work/redesign3/design.html" target="_blank"
+                                            class="redesign-select">Redesign</a>
+                                        <a href="work/redesign3/process.html" target="_blank" class="redesign-select"
+                                            target="_blank">Process</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="redesign-select">Redesign</a>
-                    <a href="#" class="redesign-select">Process</a>
-                    <a href="#" class="redesign-select">Origianl site</a>
+
                 </div>
             </div>
         </section>
         <!-- // 리디자인 영역 -->
         <!-- 퍼블리싱 영역 -->
-        <section class="publishing">
-            <div class="container">
+        <section class="publishing" id="publishing">
+            <div class="container clearfix">
                 <div class="publishing-left">
                     <div class="publishing-box">
-                        <a href="#"></a>
-                    </div>
-                    <a href="https://hjoun958.github.io/stxconst/" class="publishing-select"
-                        target="_blank">Publishing</a>
-                    <a href="http://stxconst.co.kr/" class="publishing-select" target="_blank">Origianl site</a>
-                </div>
-                <ul class="publishing-right">
-                    <li class="publishing-main-list">
-                        <h2><b>PUBLISHING</b></h2>
-                        <span></span>
-                    </li>
-                    <li class="publishing-main-list">
-                        <a href="#" class="publishing-number">01</a>
-                        <a href="#" class="publishing-tit">STX건설</a>
-                        <a href="#" class="publishing-txt">
-                            전문 역량 강화를 통해 건축, 주택, 토목, 플랜트 사업 영역에서<br>
-                            활동하는 건설 홈페이지 입니다.
-                        </a>
-                    </li>
-                    <li class="publishing-main-list">
-                        <a href="#" class="publishing-number">02</a>
-                        <a href="#" class="publishing-tit">풀무원 녹즙</a>
-                        <a href="#" class="publishing-txt">
-                            유기농의 제품으로 사용하여 맛이 질리지 않고 다양한 맛으로 승부하여<br>
-                            매일 건강한 삶의 질을 높혀주는 풀무원 녹즙 홈페이지입니다.
-                        </a>
-                    </li>
-                    <li class="publishing-main-list">
-                        <a href="#" class="publishing-number">03</a>
-                        <a href="#" class="publishing-tit">한살림 장보기</a>
-                        <a href="#" class="publishing-txt">
-                            기본 식생활에서부터 의류,생활물품을 가장 쉽게 하거나 할인된 가격으로<br>
-                            구매할 수 있는 한살림 장보기 홈페이지입니다.
-                        </a>
-                    </li>
-                    <li class="publishing-main-list">
-                        <a href="#" class="publishing-number">04</a>
-                        <a href="#" class="publishing-tit">풀무원 샘물</a>
-                        <a href="#" class="publishing-txt">
-                            미네랄이 풍부한 화강암반수로 담은 물로 550여가지의 수질검사로 걸쳐<br>
-                            생산부터 재활용까지 모든 단계에서 연구와 노력하는 풀무원 샘물 홈페이지입니다.
-                        </a>
-                    </li>
-                    <li class="publishing-main-list">
-                        <a href="#" class="publishing-number">05</a>
-                        <a href="#" class="publishing-tit">넥서스 플래그십 서울 갤러리</a>
-                        <a href="#" class="publishing-txt">
-                            건축가 배대용의 공간에 대한 철학이 녹아 있는 쇼룸인 동시에 인테리어에 대한<br>
-                            새로운 가치를 제안하는 문화인 공간넥서스 플래그십 서울 갤러리입니다.
+                        <div class="swiper-container sw-publ">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide publ-1">
+                                    <a href="#"></a>
+                                    <div class="publishing-select-bg">
+                                        <a href="https://hjoun958.github.io/stxconst/" class="publishing-select"
+                                            target="_blank">Publishing</a>
+                                        <a href="http://stxconst.co.kr/" class="publishing-select"
+                                            target="_blank">Origianl site</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide publ-2">
+                                    <a href="#"></a>
+                                    <div class="publishing-select-bg">
+                                        <a href=" https://hjoun958.github.io/greenjuice/" class="publishing-select"
+                                            target="_blank">Publishing</a>
+                                        <a href="https://greenjuice.pulmuone.com/" class="publishing-select"
+                                            target="_blank">Origianl site</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide publ-3">
+                                    <a href="#"></a>
+                                    <div class="publishing-select-bg">
+                                        <a href="https://hjoun958.github.io/hansalim/" class="publishing-select"
+                                            target="_blank">Publishing</a>
+                                        <a href="https://shop.hansalim.or.kr/shopping/spMain.do"
+                                            class="publishing-select" target="_blank">Origianl site</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide publ-4">
+                                    <a href="#"></a>
+                                    <div class="publishing-select-bg">
+                                        <a href="https://hjoun958.github.io/pulmuonewater/" class="publishing-select"
+                                            target="_blank">Publishing</a>
+                                        <a href="https://www.pulmuonewater.com/" class="publishing-select"
+                                            target="_blank">Origianl site</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide publ-5">
+                                    <a href="#"></a>
+                                    <div class="publishing-select-bg">
+                                        <a href="https://hjoun958.github.io/nexus/" class="publishing-select"
+                                            target="_blank">Publishing</a>
+                                        <a href="https://nexus-official.com/" class="publishing-select"
+                                            target="_blank">Origianl site</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    </div>
+
+                </div>
+                <div class="publishing-right">
+                    <ul class="publishing-main">
+                        <li class="publishing-main-list">
+                            <h2><b>PUBLISHING</b></h2>
+                            <span class="publishing-bar"></span>
+                        </li>
+                        <li class="publishing-main-list">
+                            <a href="#" class="publishing-number" pub-tag="0">01</a>
+                            <a href="#" class="publishing-tit" pub-tag="0">STX건설</a>
+                            <a href="#" class="publishing-txt" pub-tag="0">
+                                전문 역량 강화를 통해 건축, 주택, 토목, 플랜트 사업 영역에서<br>
+                                활동하는 건설 홈페이지 입니다.
+                            </a>
+                        </li>
+                        <li class="publishing-main-list">
+                            <a href="#" class="publishing-number" pub-tag="1">02</a>
+                            <a href="#" class="publishing-tit" pub-tag="1">풀무원 녹즙</a>
+                            <a href="#" class="publishing-txt" pub-tag="1">
+                                유기농의 제품으로 사용하여 맛이 질리지 않고 다양한 맛으로 승부하여<br>
+                                매일 건강한 삶의 질을 높혀주는 풀무원 녹즙 홈페이지입니다.
+                            </a>
+                        </li>
+                        <li class="publishing-main-list">
+                            <a href="#" class="publishing-number" pub-tag="2">03</a>
+                            <a href="#" class="publishing-tit" pub-tag="2">한살림 장보기</a>
+                            <a href="#" class="publishing-txt" pub-tag="2">
+                                기본 식생활에서부터 의류,생활물품을 가장 쉽게 하거나 할인된 가격으<br>
+                                로 구매할 수 있는 한살림 장보기 홈페이지입니다.
+                            </a>
+                        </li>
+                        <li class="publishing-main-list">
+                            <a href="#" class="publishing-number" pub-tag="3">04</a>
+                            <a href="#" class="publishing-tit" pub-tag="3">풀무원 샘물</a>
+                            <a href="#" class="publishing-txt" pub-tag="3">
+                                미네랄이 풍부한 화강암반수로 담은 물로 550여가지의 수질검사로 걸쳐<br>
+                                생산부터 재활용까지 모든 단계에서 연구와 노력하는 풀무원 샘물 홈페이지입니다.
+                            </a>
+                        </li>
+                        <li class="publishing-main-list">
+                            <a href="#" class="publishing-number" pub-tag="4">05</a>
+                            <a href="#" class="publishing-tit" pub-tag="4">넥서스 플래그십 서울 갤러리</a>
+                            <a href="#" class="publishing-txt" pub-tag="4">
+                                건축가 배대용의 공간에 대한 철학이 녹아 있는 쇼룸인 동시에 인테리어<br>
+                                에 대한새로운 가치를 제안하는 문화인 공간넥서스 플래그십 서울 갤러리입니다.
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </section>
         <!-- // 퍼블리싱 영역 -->
         <!-- 기타 영역 -->
-        <section class="work">
+        <section class="work" id="work">
             <div class="container">
-                <div class="work-top">
-                    <h2>WORK</h2>
-                    <span></span>
+                <h2 class="work-par">ETC</h2>
+                <span class="work-bar"></span>
+                <div class="work-wrap">
+                    <ul class="wrap-box clearfix">
+                        <li>
+                            <span class="work-black">
+                                <p class="work-tit">01 북디자인</p>
+                                <p class="work-txt">
+                                    책 표지 부분을 추상적인 그림으로 배치해서<br>
+                                    독특한 표지로 구성했습니다.
+                                </p>
+                            </span>
+                            <a href="work/etc0/book.png" data-lightbox="image-1" data-title="Book">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="work-black">
+                                <p class="work-tit">02 폰케이스디자인</p>
+                                <p class="work-txt">
+                                    반고흐의 '별이 빛나는 밤'을 그림을<br>
+                                    내 방식대로 추상한 휴대폰 케이스로 구성했습니다.
+                                </p>
+                            </span>
+                            <a href="work/etc1/phone-case.png" data-lightbox="image-1" data-title="Phone-case">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="work-black">
+                                <p class="work-tit">03 로고디자인</p>
+                                <p class="work-txt">
+                                    제 포트폴리오인 로고를 재 배치하여 일상적인 <br>
+                                    로고에도 흔히 쓸 수 있게 목업으로 구성했습니다.
+                                </p>
+                            </span>
+                            <a href="work/etc2/cup.png"" data-lightbox=" image-1" data-title="Cup">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="work-black">
+                                <p class="work-tit">04 쇼핑백디자인</p>
+                                <p class="work-txt">
+                                    여름의 바닷가의 이미지가 생각나는 색깔,형태로<br>
+                                    시원한 가방 표현을 하여 목업으로 구성했습니다.
+                                </p>
+                            </span>
+                            <a href="work/etc3/bag.png" data-lightbox="image-1" data-title="Bag">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="work-black">
+                                <p class="work-tit">05 로고디자인</p>
+                                <p class="work-txt">
+                                    치과의 특유의 색감과 신뢰성이 있는 글귀를 <br>
+                                    나타내어 명함의 목업으로 구성해보았습니다.
+                                </p>
+                            </span>
+                            <a href="work/etc4/sun2_logo.png" data-lightbox="image-1" data-title="Sun-logo">
+                            </a>
+                        </li>
+                        <li>
+                            <span class="work-black">
+                                <p class="work-tit">06 패키지디자인</p>
+                                <p class="work-txt">
+                                    연말이 다가오는 크리스마스 분위기로 표현하고자 <br>
+                                    그림을 배치하여 목업으로 구성해보았습니다.
+                                </p>
+                            </span>
+                            <a href="work/etc5/gift.png" data-lightbox="image-1" data-title="Gift">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="work-bottom">
-                    <li class="work-box">
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li class="work-box">
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li class="work-box">
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                    <li class="work-box">
-                        <a href="#">
-                            <img src="" alt="">
-                        </a>
-                    </li>
-                </ul>
             </div>
         </section>
         <!-- // 기타 영역 -->
-        <!-- 하단 영역 -->
-        <footer class="footer">
+        <!-- life 영역 -->
+        <section class="life" id="life">
             <div class="container">
-                <h2 class="footer-tit">contact me</h2>
-                <span class="foot-txt">email hjoun958@naver.com</span>
+                <div class="life-wrap">
+                    <h2 class="life-par">LIFE</h2>
+                </div>
+                <div class="life-box">
+                    <a href="#" class="life-box-main" data-aos="zoom-in" data-aos-duration="1000">
+                        <span class="life-black">
+                            <p class="life-box-tit">전시회 감상</p>
+                            <p class="life-box-txt">
+                                제가 이수했던 전공 영향으로 미술관을 자주 것도 있지만 무엇보다<br>
+                                전시회에 색다른 그림이나 색감 및 여러가지 감각들을 받아서 더 <br>
+                                관심있게 가져서 자주 가게 되는 것 같습니다.
+                            </p>
+                        </span>
+                        <img src="images/life-1.png" alt="">
+                    </a>
+                    <a href="#" class="life-box-sub-1" data-aos="zoom-in-up" data-aos-duration="1000">
+                        <span class="life-black">
+                            <p class="life-box-tit">등산</p>
+                            <p class="life-box-txt">
+                                원래 운동을 좋아했지만 실내에서 하는 <br>
+                                운동보다는 야외에서 기분을 힐링하고 <br>
+                                싶을 때 집 근처 산으로 올라갑니다.
+                            </p>
+                        </span>
+                        <img src="images/life-2.png" alt="">
+                    </a>
+                    <a href="#" class="life-box-sub-2" data-aos="zoom-in-left" data-aos-duration="1000">
+                        <span class="life-black">
+                            <p class="life-box-tit">여행</p>
+                            <p class="life-box-txt">
+                                여행을 하면서 기분전환하고 그 지역 <br>
+                                특색을 알아보고 사진찍는 걸 좋아합니다.<br>
+                            </p>
+                        </span>
+                        <img src="images/life-3.png" alt="">
+                    </a>
+                    <a href="#" class="life-box-sub-3" data-aos="zoom-in-right" data-aos-duration="1000">
+                        <span class="life-black">
+                            <p class="life-box-tit">만화책</p>
+                            <p class="life-box-txt">
+                                제가 좋아하는 웹툰,만화책을 좋아해서<br>
+                                미술에 관심가진 계기이기도 합니다.
+                            </p>
+                        </span>
+                        <img src="images/life-4.png" alt="">
+                    </a>
+                </div>
+                <div class="life-txt">
+                    <p class="life-txt-main">저의 life을 보여드릴께요<i class="icon-emo-happy"></i></p>
+                    <p class="life-txt-sub">제 취미와 운동,여행부분을 즐겁게 봐주세요</p>
+                </div>
+            </div>
+        </section>
+        <!--// life 영역 -->
+        <!-- 하단 영역 -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="contact-tit">contact me</h2>
+                <span class="contact-txt">email hjoun958@naver.com</span>
                 <a href="#" class="barcode">
                     <img src="images/barcode.png" alt="바코드">
                 </a>
-                <a href="#" class="footer-data" target="_blank">PDF 다운 받기</a>
-                <a href="#" class="footer-data" target="_blank">Git Hub</a>
+                <div class="contact-data-bg">
+                    <button class="contact-data" target="_blank"><a href="">PDF 다운 받기</a></button>
+                    <button class="contact-data" target="_blank"><a href="https://github.com/hjoun958""> Git Hub</a></button>
+                </div>
             </div>
-        </footer>
+        </section>
         <!-- // 하단 영역 -->
     </div>
 </body>

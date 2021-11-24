@@ -198,6 +198,7 @@ body {
     position: relative;
     display: block;
     margin-top: 7.5rem;
+    margin-right: 4.5rem;
 }
 
 .header-main>li {
@@ -899,25 +900,194 @@ body {
     line-height: 1.75;
 }
 
+/* life 영역 */
+.life {
+    position: relative;
+    display: block;
+    height: 102rem;
+    background-color: #efd9d1;
+}
+
+.life .container {
+    position: relative;
+    width: 121rem;
+    height: 102rem;
+    display: block;
+}
+
+.life-wrap {
+    position: relative;
+    display: block;
+}
+
+.life-par {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+    padding-top: 8.5rem;
+}
+
+.life-box {
+    position: relative;
+    display: block;
+    height: 70rem;
+}
+
+.life-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.life-box-tit {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3rem;
+    font-weight: 600;
+    color: #613937;
+    white-space: nowrap;
+
+}
+
+.life-box-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #613937;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 1.75;
+}
+
+.life-box-main {
+    position: absolute;
+    left: 310px;
+    top: 80px;
+    display: block;
+    /* width: 51.8rem;
+    height: 51.8rem; */
+}
+
+.life-box-main:hover .life-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(153, 153, 153, 0.4);
+    opacity: 1;
+}
+
+.life-box-sub-1 {
+    position: absolute;
+    right: -62px;
+    top: 275px;
+    display: block;
+    /* width: 36.5rem;
+    height: 36.5rem; */
+}
+
+.life-box-sub-1:hover .life-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(153, 153, 153, 0.4);
+    opacity: 1;
+}
+
+.life-box-sub-2 {
+    position: absolute;
+    right: 15rem;
+    top: 30px;
+    display: block;
+    /* width: 20rem;
+    height: 20rem; */
+}
+
+.life-box-sub-2:hover .life-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(153, 153, 153, 0.4);
+    opacity: 1;
+}
+
+.life-box-sub-3 {
+    position: absolute;
+    left: 140px;
+    top: 400px;
+    display: block;
+}
+
+.life-box-sub-3:hover .life-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(153, 153, 153, 0.4);
+    opacity: 1;
+}
+
+.life-txt {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.life-txt-main {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #6e1652;
+    margin-bottom: 2rem;
+}
+
+.life-txt-sub {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #6e1652;
+}
 
 /* 하단 영역 */
 .contact {
     position: relative;
     display: block;
-    background-color: #efd9d1;
+    width: 100%;
+    background-color: #fff;
 }
 
 .contact .container {
     position: relative;
+    width: 121rem;
+    height: 90rem;
     display: block;
-    height: 55rem;
     text-align: center;
 }
 
 .contact-tit {
     position: relative;
     display: block;
-    padding-top: 8rem;
+    padding-top: 25rem;
     font-size: 6rem;
     font-weight: 600;
     line-height: 1.25;
@@ -934,8 +1104,6 @@ body {
 .contact-txt {
     position: relative;
     display: block;
-    /* white-space: nowrap; */
-
     font-size: 2rem;
     font-weight: 600;
     color: #6e1652;
@@ -945,21 +1113,19 @@ body {
 .barcode {
     position: relative;
     display: block;
-    /* vertical-align: center; */
     margin-top: 4.5rem;
 }
 
 .contact-data-bg {
     position: relative;
     display: block;
-    /* text-align: center; */
     margin-left: 5rem;
 }
 
 .contact-data {
     display: inline-block;
     text-transform: uppercase;
-    background-color: #efd9d1;
+    background-color: #fff;
     border: 1rem solid #6e1652;
     padding: 0.43rem 2.3rem;
     font-size: 1.6rem;
