@@ -1,4 +1,4 @@
-@charset 'utf-8'
+@charset 'utf-8';
 @import url('notosanskr/NotoSansKR.css');
 
 * {
@@ -23,8 +23,51 @@ li {
     list-style: none;
 }
 
+h2 {
+    font-family: 'Noto Sans KR';
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #6e1652;
+    letter-spacing: -0.00625rem;
+}
+
+html {
+    scrollbar-3dLight-Color: #efefef;
+    scrollbar-arrow-color: #dfdfdf;
+    scrollbar-base-color: #efefef;
+    scrollbar-Face-Color: #dfdfdf;
+    scrollbar-Track-Color: #efefef;
+    scrollbar-DarkShadow-Color: #efefef;
+    scrollbar-Highlight-Color: #efefef;
+    scrollbar-Shadow-Color: #efefef;
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* 스크롤바의 width */
+::-webkit-scrollbar-track {
+    background-color: #704988;
+}
+
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #671991, #fe5b8a);
+}
+
+/* 스크롤바 색 */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
 html {
     font-size: 10px;
+    overflow-x: hidden;
 }
 
 body {
@@ -37,6 +80,11 @@ body {
 }
 
 /* 중요한 소스 */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     position: relative;
     display: block;
@@ -52,9 +100,35 @@ body {
     clear: both;
 }
 
-.wrap {
-    position: relative;
-    display: block;
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.gotop {
+    position: fixed;
+    /* right: 5rem; */
+    left: calc(50% + 85rem);
+    transform: translateX(-50%);
+
+    bottom: 15rem;
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+    background-color: #c43b65;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 5rem;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.gotop:hover {
+    background-color: #f00;
 }
 
 .h2 {
@@ -67,11 +141,30 @@ body {
     letter-spacing: -0.00625rem;
 }
 
-/* 상단 영역 */
-.header {
+.wrap {
     position: relative;
     display: block;
+}
 
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background: url('../images/visual_main.png') #efd9d1 no-repeat 0 0;
+    /*background-size: cover;*/
+}
+
+
+/* 상단 영역 */
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: block;
+    z-index: 9999;
 }
 
 .header .container {
@@ -87,7 +180,7 @@ body {
 
 .header-logo {
     position: absolute;
-    left: 4.8rem;
+    left: -9rem;
     top: 5rem;
     display: block;
     width: 14rem;
@@ -121,17 +214,10 @@ body {
     color: #613937;
 }
 
-/* 비주얼 영역 */
-.visual {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-}
-
-.visual .container {
+.visual .visual-bg {
     height: 97.8rem;
-    background: url('../images/visual_main.png') no-repeat center;
-    background-size: cover;
+    /* background: url('../images/visual_main.png') no-repeat center;
+    background-size: cover;*/
 }
 
 .visual-main {
@@ -151,7 +237,7 @@ body {
 
 .sub-img-icon {
     position: absolute;
-    left: 2rem;
+    left: 0rem;
     top: 62rem;
     display: block;
     width: 28.4rem;
@@ -162,14 +248,14 @@ body {
 .visual-tit {
     position: relative;
     display: block;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .visual-tit>a {
     position: absolute;
     right: 12.5rem;
     top: 35rem;
-    width: 66.6rem;
+    width: 74.8rem;
     height: 19.5rem;
     display: block;
     background: url('../images/visual-tt.png') no-repeat;
@@ -179,19 +265,32 @@ body {
 .profile {
     position: relative;
     display: block;
-    height: 96rem;
+    height: 106rem;
+    background: url('../images/profile-bk.png') repeat-x;
 }
 
 .profile .container {
     height: 100%;
-    background: url('../images/profile-bk.png') repeat-x;
+    /*background: url('../images/profile-bk.png') repeat-x;*/
 }
 
 .profile-left {
     position: absolute;
     left: 20.5rem;
-    top: 14rem;
+    top: 13.5rem;
+    width: 66.6rem;
     display: block;
+}
+
+.profile-left::after {
+    content: '';
+    position: absolute;
+    left: 66.6rem;
+    top: 10rem;
+    width: 0.1rem;
+    bottom: 0;
+    display: block;
+    background-color: #f4eeed;
 }
 
 .profile-par {
@@ -200,12 +299,24 @@ body {
 }
 
 .profile-title {
+    position: relative;
+    display: block;
     font-size: 6rem;
     font-weight: 600;
     line-height: 1.25;
     color: #6e1652;
     letter-spacing: -0.00625rem;
-    margin-bottom: 8rem;
+    margin-bottom: 2.5rem;
+}
+
+.profile-bar {
+    content: '';
+    position: relative;
+    display: block;
+    width: 116.5rem;
+    height: 0.1rem;
+    background-color: #f4eeed;
+    margin-bottom: 5rem;
 }
 
 .profile-txt {
@@ -237,12 +348,20 @@ body {
 .profile-right {
     position: absolute;
     right: 25rem;
-    top: 23.5rem;
-    display: inline-block;
-    float: right;
-    width: 40rem;
+    top: 26.2rem;
+    display: block;
+    width: 41rem;
     height: 65.4rem;
     background: url('../images/my.png') no-repeat;
+}
+
+.profile-img {
+    position: absolute;
+    right: -9rem;
+    top: 57rem;
+    display: inline-block;
+    width: 21.9rem;
+    height: 15.6rem;
 }
 
 /* 리디자인 영역 */
@@ -265,21 +384,31 @@ body {
 }
 
 .redesign-main {
-    position: relative;
+    position: absolute;
+    left: 17.5rem;
+    top: 18.5rem;
     display: block;
 }
 
 .redesign-main-list {
     position: relative;
     display: block;
-    margin: 4rem 19.5rem;
+    width: 48rem;
+    height: 11rem;
+    margin: 2rem 0;
+}
+
+.redesign-main-list:hover a {
+    color: #6e1652;
 }
 
 .redesign-main-list>h2 {
-    position: relative;
-    display: inline-block;
-    margin-top: 18.5rem;
-    margin-bottom: 5.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    /* margin-top: 18.5rem; */
+    margin-bottom: 1.5rem;
     font-size: 6rem;
     font-weight: 600;
     line-height: 1.25;
@@ -287,36 +416,51 @@ body {
     letter-spacing: -0.00625rem;
 }
 
-.redesign-main-list>span {}
+.redesign-bar {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8rem;
+    display: block;
+    width: 68.5rem;
+    height: 0.1rem;
+    background-color: #f4eeed;
+    /* margin-bottom: 4rem; */
+}
 
 .redesign-number {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: block;
-    float: left;
     margin-right: 2rem;
     font-size: 3.6rem;
     font-weight: 500;
     line-height: 2;
-    color: #6e1652;
+    color: #999;
 }
 
 .redesign-tit {
-    position: relative;
+    position: absolute;
+    left: 5.5rem;
+    top: 0.3rem;
     display: block;
     font-size: 3rem;
     font-weight: 600;
     line-height: 2;
-    color: #6e1652;
+    color: #999;
 }
 
 .redesign-txt {
-    position: relative;
+    position: absolute;
+    left: 5.5rem;
+    top: 6.5rem;
     display: block;
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 1.25;
-    color: #6e1652;
-    letter-spacing: -0.00625rem;
+    line-height: 1.75;
+    color: #999;
+    letter-spacing: -0.0425rem;
 }
 
 .redesign-right {
@@ -331,19 +475,71 @@ body {
     margin-top: 18.5rem;
     margin-bottom: 5.3rem;
     width: 74rem;
-    height: 60rem;
+    height: 67rem;
     box-sizing: border-box;
-    background-color: #f0eee7;
+    /* background-color: #f0eee7; */
 }
 
-.redesign-box>a {
+.swiper-container {}
+
+.sw-rede .swiper-slide::before {
+    content: '';
     position: absolute;
-    left: 5.5rem;
-    top: 14.5rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60rem;
+    background-color: #f0eee7;
+    z-index: -1;
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.rede-1 {
+    position: relative;
     display: block;
-    width: 58.8rem;
-    height: 40.2rem;
+    width: 100%;
+    height: 100%;
     background: url('../images/subway-img.png') no-repeat;
+    background-position: 5.6rem 14.5rem;
+}
+
+.rede-2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/maya-img.png') no-repeat;
+    background-position: 14rem 14.2rem;
+}
+
+.rede-3 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/sun-img.png') no-repeat;
+    background-position: 14rem 14.2rem;
+}
+
+.redesign-select-bg {
+    position: absolute;
+    right: 2.5rem;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.redesign-select-bg-sub {
+    position: absolute;
+    right: -8rem;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
 
 .redesign-select {
@@ -385,19 +581,82 @@ body {
     margin-top: 17rem;
     margin-bottom: 6.5rem;
     width: 76.7rem;
-    height: 61rem;
+    height: 69.5rem;
     box-sizing: border-box;
-    background-color: #f0eee7;
+    /* background-color: #f0eee7; */
 }
 
-.publishing-box>a {
+
+.swiper-container {}
+
+.sw-publ .swiper-slide::before {
+    content: '';
     position: absolute;
-    left: 10rem;
-    top: 12.5rem;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60rem;
+    background-color: #f0eee7;
+    z-index: -1;
+}
+
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.publ-1 {
+    position: relative;
     display: block;
-    width: 60.4rem;
-    height: 46.6em;
+    width: 100%;
+    height: 100%;
     background: url('../images/stx-img.png') no-repeat;
+    background-position: 10rem 12.5rem;
+}
+
+.publ-2 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/greenjuice-img.png') no-repeat;
+    background-position: 10rem 12.5rem;
+}
+
+.publ-3 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/hansalim-img.png') no-repeat;
+    background-position: 10rem 12.5rem;
+}
+
+.publ-4 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pulmuonewater-img.png') no-repeat;
+    background-position: 10rem 12.5rem;
+}
+
+.publ-5 {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('../images/nexus-img.png') no-repeat;
+    background-position: 10rem 12.5rem;
+}
+
+.publishing-select-bg {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
 }
 
 .publishing-select {
@@ -421,21 +680,29 @@ body {
 }
 
 .publishing-main {
-    position: relative;
+    position: absolute;
+    right: 14.3rem;
+    top: 12rem;
     display: block;
 }
 
 .publishing-main-list {
     position: relative;
     display: block;
-    margin: 4rem 15rem;
+    width: 57rem;
+    height: 10rem;
+    margin: 4rem 0;
+}
+
+.publishing-main-list:hover a {
+    color: #6e1652;
 }
 
 .publishing-main-list>h2 {
     position: relative;
-    display: inline-block;
-    margin-top: 12.5rem;
-    margin-bottom: 5.5rem;
+    display: block;
+    /* margin-top: 12.5rem; */
+    /* margin-bottom: 1rem; */
     font-size: 6rem;
     font-weight: 600;
     line-height: 1.25;
@@ -443,102 +710,214 @@ body {
     letter-spacing: -0.00625rem;
 }
 
-.publishing-main-list>span {}
+.publishing-bar {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 9rem;
+    display: block;
+    width: 69rem;
+    height: 0.1rem;
+    background-color: #f4eeed;
+}
 
 .publishing-number {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: block;
-    float: left;
     margin-right: 2rem;
     font-size: 3.6rem;
     font-weight: 500;
     line-height: 2;
-    color: #6e1652;
+    color: #f0eee7;
 }
 
 .publishing-tit {
-    position: relative;
+    position: absolute;
+    left: 6rem;
+    top: 0.5rem;
     display: block;
     font-size: 3rem;
     font-weight: 600;
     line-height: 2;
-    color: #6e1652;
+    color: #f0eee7;
 }
 
 .publishing-txt {
-    position: relative;
+    position: absolute;
+    left: 6rem;
+    top: 6.5rem;
     display: block;
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 1.25;
-    color: #6e1652;
+    line-height: 1.75;
+    color: #f0eee7;
     letter-spacing: -0.0425rem;
 }
 
 /* 기타 영역 */
 .work {
     position: relative;
-    display: block;
+    height: 97rem;
+    margin: 0 auto;
     background-color: #fff;
 }
 
 .work .container {
     position: relative;
-    display: block;
+    width: 121rem;
     height: 102rem;
 }
 
-.work-top {}
-
-.work-top>h2 {
-    position: relative;
-    display: block;
-    margin-top: 9rem;
-    margin-left: 20rem;
+.work-par {
     font-size: 6rem;
     font-weight: 600;
     line-height: 1.25;
     color: #6e1652;
+    letter-spacing: -0.00625rem;
+    margin-top: 8.5rem;
 }
 
-.work-top>span {}
+.work-bar {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10rem;
+    display: block;
+    width: 121rem;
+    height: 0.1rem;
+    background-color: #cccccc;
+}
 
-.work-bottom {
+.work-wrap {
     position: relative;
     display: block;
-    height: 102rem;
 }
 
-.work-box {
-    position: absolute;
-    left: 27.7rem;
-    top: 8.3rem;
-    display: block;
-    width: 55.5rem;
-    height: 32rem;
-    box-sizing: border-box;
-    background-color: #bbb;
+.wrap-box {
+    position: relative;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10rem;
 }
+
+.wrap-box>li {
+    position: relative;
+    display: block;
+    width: 40rem;
+    height: 32.1rem;
+    margin-bottom: 2rem;
+}
+
+.wrap-box>li>a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.wrap-box>li:nth-child(1) {
+    background: url('../work/etc0/work-book.png') no-repeat center;
+    background-size: cover;
+}
+
+
+.wrap-box>li:nth-child(2) {
+    background: url('../work/etc1/work-phone-case.png') no-repeat center;
+    background-size: cover;
+}
+
+
+.wrap-box>li:nth-child(3) {
+    background: url('../work/etc2/work-cup.png') no-repeat center;
+    background-size: cover;
+}
+
+
+.wrap-box>li:nth-child(4) {
+    background: url('../work/etc3/work-bag.png') no-repeat center;
+    background-size: cover;
+}
+
+
+.wrap-box>li:nth-child(5) {
+    background: url('../work/etc4/work-sun-logo.png') no-repeat center;
+    background-size: cover;
+}
+
+
+.wrap-box>li:nth-child(6) {
+    background: url('../work/etc5/work-gift.png') no-repeat center;
+    background-size: cover;
+}
+
+.work-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wrap-box>li:hover .work-black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239, 217, 209, 0.8);
+    opacity: 1;
+}
+
+.work-tit {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3rem;
+    font-weight: 600;
+    color: #613937;
+    white-space: nowrap;
+
+}
+
+.work-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    color: #613937;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 1.75;
+}
+
 
 /* 하단 영역 */
-.footer {
+.contact {
     position: relative;
     display: block;
     background-color: #efd9d1;
 }
 
-.footer .container {
+.contact .container {
     position: relative;
     display: block;
     height: 55rem;
     text-align: center;
 }
 
-.footer-tit {
+.contact-tit {
     position: relative;
     display: block;
-    padding-top: 12rem;
-
+    padding-top: 8rem;
     font-size: 6rem;
     font-weight: 600;
     line-height: 1.25;
@@ -546,13 +925,13 @@ body {
     letter-spacing: -0.00625rem;
 }
 
-.footer-ad {
+.contact-ad {
     position: relative;
     display: block;
     width: 100%;
 }
 
-.foot-txt {
+.contact-txt {
     position: relative;
     display: block;
     /* white-space: nowrap; */
@@ -566,21 +945,28 @@ body {
 .barcode {
     position: relative;
     display: block;
-    vertical-align: center;
+    /* vertical-align: center; */
     margin-top: 4.5rem;
 }
 
-.footer-data {
+.contact-data-bg {
     position: relative;
     display: block;
-    margin-top: 4.5rem;
+    /* text-align: center; */
+    margin-left: 5rem;
+}
 
-    width: 28rem;
-    height: 6.5rem;
-    border: 10px solid #6e1652;
-    border-radius: 30%;
-    font-size: 2.5;
+.contact-data {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #efd9d1;
+    border: 1rem solid #6e1652;
+    padding: 0.43rem 2.3rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: #6e1652;
     line-height: 1.25;
+    border-radius: 5rem;
+    margin-right: 5.8rem;
+    margin-top: 4.7rem;
 }
