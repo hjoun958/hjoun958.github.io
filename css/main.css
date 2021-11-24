@@ -822,37 +822,37 @@ body {
 }
 
 .wrap-box>li:nth-child(1) {
-    background: url('../work/etc0/work-book.png') no-repeat center;
+    background: url('../images/work-book.png') no-repeat center;
     background-size: cover;
 }
 
 
 .wrap-box>li:nth-child(2) {
-    background: url('../work/etc1/work-phone-case.png') no-repeat center;
+    background: url('../images/work-phone-case.png') no-repeat center;
     background-size: cover;
 }
 
 
 .wrap-box>li:nth-child(3) {
-    background: url('../work/etc2/work-cup.png') no-repeat center;
+    background: url('../images/work-cup.png') no-repeat center;
     background-size: cover;
 }
 
 
 .wrap-box>li:nth-child(4) {
-    background: url('../work/etc3/work-bag.png') no-repeat center;
+    background: url('../images/work-bag.png') no-repeat center;
     background-size: cover;
 }
 
 
 .wrap-box>li:nth-child(5) {
-    background: url('../work/etc4/work-sun-logo.png') no-repeat center;
+    background: url('../images/work-sun-logo.png') no-repeat center;
     background-size: cover;
 }
 
 
 .wrap-box>li:nth-child(6) {
-    background: url('../work/etc5/work-gift.png') no-repeat center;
+    background: url('../images/work-gift.png') no-repeat center;
     background-size: cover;
 }
 
