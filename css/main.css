@@ -146,22 +146,9 @@ body {
     display: block;
 }
 
-
-/* 비주얼 영역 */
-.visual {
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    background: url('../images/visual_main.png') #efd9d1 no-repeat 0 0;
-    /*background-size: cover;*/
-}
-
-
 /* 상단 영역 */
 .header {
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: fixed;
     width: 100%;
     display: block;
     z-index: 9999;
@@ -213,6 +200,15 @@ body {
     line-height: 1.25;
     margin-right: 3rem;
     color: #613937;
+}
+
+/* 비주얼 영역 */
+.visual {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background: url('../images/visual_main.png') #efd9d1 no-repeat 0 0;
+    /*background-size: cover;*/
 }
 
 .visual .visual-bg {
@@ -971,14 +967,16 @@ body {
 
 .life-box-main {
     position: absolute;
-    left: 310px;
-    top: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: block;
     /* width: 51.8rem;
     height: 51.8rem; */
+    cursor: default;
 }
 
-.life-box-main:hover .life-black {
+/* .life-box-main:hover .life-black {
     position: absolute;
     left: 0;
     top: 0;
@@ -987,17 +985,19 @@ body {
     border-radius: 50%;
     background-color: rgba(153, 153, 153, 0.4);
     opacity: 1;
-}
+} */
 
 .life-box-sub-1 {
     position: absolute;
-    right: -62px;
-    top: 275px;
+    right: 13rem;
+    top: 45.5rem;
     display: block;
     /* width: 36.5rem;
     height: 36.5rem; */
+    cursor: default;
 }
 
+/* 
 .life-box-sub-1:hover .life-black {
     position: absolute;
     left: 0;
@@ -1007,18 +1007,124 @@ body {
     border-radius: 50%;
     background-color: rgba(153, 153, 153, 0.4);
     opacity: 1;
-}
+} */
 
 .life-box-sub-2 {
     position: absolute;
-    right: 15rem;
-    top: 30px;
+    right: 25rem;
+    top: 12.5rem;
     display: block;
     /* width: 20rem;
     height: 20rem; */
+    cursor: default;
 }
 
-.life-box-sub-2:hover .life-black {
+.life-box-sub-3 {
+    position: absolute;
+    left: 23.5rem;
+    top: 50rem;
+    display: block;
+    cursor: default;
+}
+
+.life-circle-ani {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 518px;
+    height: 518px;
+    /* width: 208px;
+    height: 208px; */
+    background: url('../images/life-1.jpg') no-repeat center;
+    background-size: cover;
+    border-radius: 100%;
+    transition: width 0.5s, height 0.5s;
+    overflow: hidden;
+}
+
+.life-circle-ani:hover {
+    width: 528px;
+    height: 528px;
+    /* width: 350px;
+    height: 350px; */
+    transform: translate(-50%, -50%);
+}
+
+.life-circle-ani-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(153, 153, 153, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.life-circle-ani:hover .life-circle-ani-bg {
+    opacity: 1;
+}
+
+
+.life-circle-ani .life-box-tit {
+    opacity: 0;
+    transition: opacity 0.5s 0.5s;
+}
+
+.life-circle-ani:hover .life-box-tit {
+    opacity: 1;
+}
+
+.life-circle-ani .life-box-txt {
+    opacity: 0;
+    transition: opacity 0.5s 0.5s;
+}
+
+.life-circle-ani:hover .life-box-txt {
+    opacity: 1;
+}
+
+.life-circle-ani-2 {
+    width: 365px;
+    height: 365px;
+    background: url('../images/life-2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.life-circle-ani-2:hover {
+    width: 400px;
+    height: 400px;
+}
+
+.life-circle-ani-3 {
+    width: 208px;
+    height: 208px;
+    background: url('../images/life-3.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.life-circle-ani-3:hover {
+    width: 350px;
+    height: 350px;
+}
+
+.life-circle-ani-4 {
+    width: 126px;
+    height: 126px;
+    background: url('../images/life-4.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.life-circle-ani-4:hover {
+    width: 350px;
+    height: 350px;
+    transform: translate(-50%, -50%);
+}
+
+/* .life-box-sub-2:hover .life-black {
     position: absolute;
     left: 0;
     top: 0;
@@ -1027,15 +1133,9 @@ body {
     border-radius: 50%;
     background-color: rgba(153, 153, 153, 0.4);
     opacity: 1;
-}
+} */
 
-.life-box-sub-3 {
-    position: absolute;
-    left: 140px;
-    top: 400px;
-    display: block;
-}
-
+/* 
 .life-box-sub-3:hover .life-black {
     position: absolute;
     left: 0;
@@ -1045,7 +1145,7 @@ body {
     border-radius: 50%;
     background-color: rgba(153, 153, 153, 0.4);
     opacity: 1;
-}
+} */
 
 .life-txt {
     position: relative;
