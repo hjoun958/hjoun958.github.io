@@ -34,6 +34,7 @@ $(document).ready(function () {
         });
     });
 
+    // 리디자인 슬라이드 영역
     var swiper_rede = new Swiper(".sw-rede", {
         navigation: {
             nextEl: ".swiper-button-next",
