@@ -737,7 +737,7 @@ body {
     font-size: 3.6rem;
     font-weight: 500;
     line-height: 2;
-    color: #999;
+    color: #f4eeed;
 }
 
 .publishing-tit {
@@ -748,7 +748,7 @@ body {
     font-size: 3rem;
     font-weight: 600;
     line-height: 2;
-    color: #999;
+    color: #f4eeed;
 }
 
 .publishing-txt {
@@ -759,7 +759,7 @@ body {
     font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.75;
-    color: #999;
+    color: #f4eeed;
     letter-spacing: -0.0425rem;
 }
 
