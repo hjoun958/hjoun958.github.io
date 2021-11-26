@@ -9,6 +9,7 @@ $(document).ready(function () {
     window.onload = function () {
         AOS.init();
     }
+
     // 부드럽게 위치 이동하는 코드
     var moveEl = $('.move');
     // 클릭시 해당위치로 부드럽게 이동한다.
@@ -34,6 +35,20 @@ $(document).ready(function () {
         });
     });
 
+    //  상단 주메뉴 배경 관련
+    var header = $('.header');
+    var header_main_active_li_a = $('.header-main-active_li_a');
+
+    $(window).scroll(function () {
+
+        var scy = $(window).scrollTop();
+        if (scy > 900) {
+            header.addClass('header-active');
+        } else {
+            header.removeClass('header-active');
+        }
+    });
+    
     // 리디자인 슬라이드 영역
     var swiper_rede = new Swiper(".sw-rede", {
         navigation: {
