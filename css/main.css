@@ -840,7 +840,7 @@ body {
 
 
 .wrap-box>li:nth-child(3) {
-    background: url('../images/work-cup.png') no-repeat center;
+    background: url('../images/work-cov.png') no-repeat center;
     background-size: cover;
 }
 
@@ -852,7 +852,7 @@ body {
 
 
 .wrap-box>li:nth-child(5) {
-    background: url('../images/work-sun-logo.png') no-repeat center;
+    background: url('../images/work-jun.png') no-repeat center;
     background-size: cover;
 }
 
