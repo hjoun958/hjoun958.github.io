@@ -48,7 +48,144 @@ $(document).ready(function () {
             header.removeClass('header-active');
         }
     });
-    
+
+    // photoshop_성취율
+    var photoshop = new ProgressBar.Line(skill_photoshop, {
+        strokeWidth: 4,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#6e1652',
+        trailColor: '#ccc',
+        trailWidth: 10,
+        svgStyle: {
+            width: '100%',
+            height: '100%'
+        },
+        from: {
+            color: '#6e1652'
+        },
+        to: {
+            color: '#6e1652'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+        }
+    });
+
+    // illust 성취율
+    var illust = new ProgressBar.Line(skill_illust, {
+        strokeWidth: 4,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#6e1652',
+        trailColor: '#ccc',
+        trailWidth: 10,
+        svgStyle: {
+            width: '100%',
+            height: '100%'
+        },
+        from: {
+            color: '#6e1652'
+        },
+        to: {
+            color: '#6e1652'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+        }
+    });
+
+    // html 성취율
+    var html = new ProgressBar.Line(skill_html, {
+        strokeWidth: 4,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#6e1652',
+        trailColor: '#ccc',
+        trailWidth: 10,
+        svgStyle: {
+            width: '100%',
+            height: '100%'
+        },
+        from: {
+            color: '#6e1652'
+        },
+        to: {
+            color: '#6e1652'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+        }
+    });
+
+    // css 성취율
+    var css = new ProgressBar.Line(skill_css, {
+        strokeWidth: 5,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#6e1652z',
+        trailColor: '#ccc',
+        trailWidth: 10,
+        svgStyle: {
+            width: '100%',
+            height: '100%'
+        },
+        from: {
+            color: '#6e1652'
+        },
+        to: {
+            color: '#6e1652'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+        }
+    });
+
+    // jquery 성취율
+    var jquery = new ProgressBar.Line(skill_jquery, {
+        strokeWidth: 4,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#6e1652',
+        trailColor: '#ccc',
+        trailWidth: 12,
+        svgStyle: {
+            width: '100%',
+            height: '100%'
+        },
+        from: {
+            color: '#6e1652'
+        },
+        to: {
+            color: '#6e1652'
+        },
+        step: (state, bar) => {
+            bar.path.setAttribute('stroke', state.color);
+        }
+    });
+
+    $(window).scroll(function () {
+        // 스크롤바의 위치 값
+        var scY = $(window).scrollTop();
+
+        if (scY > 800) {
+            // 애니메이션 실행
+            photoshop.animate(0.9);
+            illust.animate(0.75);
+            html.animate(0.85);
+            css.animate(0.85);
+            jquery.animate(0.4);
+        } else {
+            // 원래모습으로 돌리기
+            photoshop.set(0.0);
+            illust.set(0.0);
+            html.set(0.0);
+            css.set(0.0);
+            jquery.set(0.0);
+        }
+
+    });
+
     // 리디자인 슬라이드 영역
     var swiper_rede = new Swiper(".sw-rede", {
         navigation: {
