@@ -463,6 +463,10 @@ body {
 .redesign-main-list:hover a {
     color: #6e1652;
 }
+.redesign-main-list-focus a{
+    color: #6e1652 !important;
+
+}
 
 .redesign-main-list>h2 {
     position: absolute;
@@ -758,6 +762,10 @@ body {
 
 .publishing-main-list:hover a {
     color: #6e1652;
+}
+.publishing-main-list-focus a{
+    color: #6e1652 !important;
+
 }
 
 .publishing-main-list>h2 {

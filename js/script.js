@@ -193,6 +193,21 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         },
     });
+    swiper_rede.on('slideChange', function () {
+            redesign_main_list.removeClass('redesign-main-list-focus')
+            redesign_main_list.eq(swiper_rede.realIndex).addClass('redesign-main-list-focus')
+    });
+
+    var redesign_main_list = $('.redesign-main-list-menu');
+        redesign_main_list.eq(0).addClass('redesign-main-list-focus')
+    $.each(redesign_main_list, function (index, item) {
+        $(this).click(function (e) {
+            // href 이동 막기
+            e.preventDefault();            
+            redesign_main_list.removeClass('redesign-main-list-focus')
+            redesign_main_list.eq(index).addClass('redesign-main-list-focus')
+        });
+    });
 
     var redesign_main_list_a = $('.redesign-main-list a');
     $.each(redesign_main_list_a, function (index, item) {
@@ -202,15 +217,30 @@ $(document).ready(function () {
 
             var temp = $(this).attr('red-tag')
             swiper_rede.slideTo(temp)
+            
         });
     });
-
 
     var swiper_pub = new Swiper(".sw-publ", {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+    });
+    swiper_pub.on('slideChange', function () {
+            publishing_main_list.removeClass('publishing-main-list-focus')
+            publishing_main_list.eq(swiper_pub.realIndex).addClass('publishing-main-list-focus')
+    });
+
+    var publishing_main_list = $('.publishing-main-list-menu');
+        publishing_main_list.eq(0).addClass('publishing-main-list-focus')
+    $.each(publishing_main_list, function (index, item) {
+        $(this).click(function (e) {
+            // href 이동 막기
+            e.preventDefault();            
+            publishing_main_list.removeClass('publishing-main-list-focus')
+            publishing_main_list.eq(index).addClass('publishing-main-list-focus')
+        });
     });
 
     var publishing_main_list_a = $('.publishing-main-list a');
